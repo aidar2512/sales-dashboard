@@ -380,7 +380,7 @@ if groq_key:
                         "Content-Type": "application/json"
                     }
                     payload = {
-                        "model": "llama3-8b-8192",
+                        "model": "llama-3.3-70b-versatile",
                         "messages": [
                             {"role": "system", "content": f"You are a data analyst assistant. Here is the current dataset summary:\n{data_summary}\nAnswer questions about this sales data concisely."},
                             *[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
