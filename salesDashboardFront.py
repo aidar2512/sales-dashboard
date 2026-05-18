@@ -89,6 +89,7 @@ st.sidebar.markdown("---")
 # Real-time: refresh button regenerates data with new seed
 if st.sidebar.button("🔄 Refresh Data (Real-Time)"):
     st.cache_data.clear()
+    st.rerun()
 
 df = generate_data()
 
