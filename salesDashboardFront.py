@@ -126,10 +126,7 @@ if sel_segment != 'All':
     filtered = filtered[filtered['segment'] == sel_segment]
 if search_term:
     filtered = filtered[filtered['product'].str.contains(search_term, case=False, na=False)]
-filtered = filtered[
-    (filtered['order_date'].dt.date >= date_from) &
-    (filtered['order_date'].dt.date <= date_to)
-]
+
 
 # ── Main layout ────────────────────────────────────────────────────────────
 st.title("📊 Sales Analytics Dashboard")
