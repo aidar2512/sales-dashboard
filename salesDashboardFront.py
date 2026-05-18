@@ -121,7 +121,7 @@ if sel_category != 'All':
 if sel_region != 'All':
     filtered = filtered[filtered['region'] == sel_region]
 if sel_year != 'All':
-    filtered = filtered[filtered['year'] == sel_year]
+    filtered = filtered[filtered['year'] == int(sel_year)]
 if sel_segment != 'All':
     filtered = filtered[filtered['segment'] == sel_segment]
 if search_term:
