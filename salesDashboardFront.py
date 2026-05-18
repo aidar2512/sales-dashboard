@@ -111,12 +111,8 @@ search_term = st.sidebar.text_input("🔍 Search Product", "")
 # Date range
 min_date = df['order_date'].min().date()
 max_date = df['order_date'].max().date()
-date_from, date_to = st.sidebar.date_input(
-    "Date Range",
-    value=[min_date, max_date],
-    min_value=min_date,
-    max_value=max_date
-)
+date_from = st.sidebar.date_input("Date From", value=min_date, min_value=min_date, max_value=max_date)
+date_to   = st.sidebar.date_input("Date To",   value=max_date, min_value=min_date, max_value=max_date)
 
 # Apply filters
 filtered = df.copy()
